@@ -1,5 +1,6 @@
+*.o
+*.exe
+*.stackdump
 main
-main.exe
-bst.o
-main.o
-bst.exe
+bst
+
