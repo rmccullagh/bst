@@ -117,3 +117,28 @@ int bst_min_value(Node* root)
 {
 	return __bst_min_value(root);
 }
+
+
+void binary_search_tree_search(Node* root, int value, int** out)
+{
+	if(root == NULL) {
+		
+		return;		
+	
+	} else {
+		
+		if(value == root->data) {
+
+			*out = &root->data;
+		} 
+
+		if(value <= root->data) {
+
+			binary_search_tree_search(root->left, value, &(*out));
+		} else {
+			
+			binary_search_tree_search(root->right, value, &(*out));
+		
+		}
+	}
+}

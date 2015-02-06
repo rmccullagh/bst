@@ -36,4 +36,6 @@ int bst_min_value(Node*);
 
 void binary_search_tree_free(Node**);
 
+void binary_search_tree_search(Node*, int, int**);
+
 #endif /* __BST_H__ */
