@@ -34,11 +34,20 @@ int main()
 	binary_search_tree_insert(&root, 2);
 	binary_search_tree_insert(&root, -2);
 	binary_search_tree_insert(&root, -4);
+
+	
+	int *found = NULL;
+	
+	binary_search_tree_search(root, 2, &found);
+
+	if(found != NULL) {
+		printf("Search: %d\n", *found);
+	}
 	
 	binary_search_tree_traverse_in_order(root, print);
 
 	binary_search_tree_free(&root);
-	
+
 	printf("\n");
 	
 	printf("BST Size: %zu\n", binary_search_tree_size(root));
